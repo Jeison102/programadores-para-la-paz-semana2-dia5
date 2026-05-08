@@ -1,60 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario Participa</title>
+
+  <title>Participación Comunitaria Digital</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <main>
+  <main class="principal">
+
     <section class="contenedor">
-      <h1>Formulario Participa</h1>
 
-      <p>
-        Este formulario permite recoger propuestas, ideas o necesidades de la comunidad.
-        La información será usada únicamente con fines de participación y organización comunitaria.
-      </p>
+      <div class="encabezado">
+        <h1>Participa con tu Comunidad</h1>
 
-      <form>
-        <div class="campo">
-          <label for="nombre">Nombre</label>
-          <input 
-            type="text" 
-            id="nombre" 
-            name="nombre" 
-            placeholder="Escribe tu nombre">
-        </div>
+        <p>
+          Bienvenido al espacio de participación comunitaria digital. 
+          Aquí puedes compartir propuestas, necesidades, problemáticas 
+          o ideas que ayuden a fortalecer la convivencia, la inclusión 
+          y el bienestar de la comunidad.
+        </p>
+      </div>
 
-        <div class="campo">
-          <label for="propuesta">Propuesta o mensaje</label>
-          <textarea 
-            id="propuesta" 
-            name="propuesta" 
-            placeholder="Escribe tu propuesta para la comunidad"></textarea>
-        </div>
+      <form class="formulario">
 
-        <div class="campo">
-          <label for="contacto">Correo o teléfono de contacto opcional</label>
-          <input 
-            type="text" 
-            id="contacto" 
-            name="contacto" 
-            placeholder="Este campo es opcional">
-        </div>
-
-        <div class="campo">
-          <label>
-            <input type="checkbox" name="consentimiento">
-            Acepto que mi información sea usada únicamente para fines de participación comunitaria.
+        <div class="grupo">
+          <label for="nombre">
+            Nombre completo
           </label>
+
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ejemplo: Jeison Mosquera Hurtado"
+            required
+            aria-required="true">
         </div>
 
-        <button type="submit">Enviar participación</button>
+        <div class="grupo">
+          <label for="correo">
+            Correo electrónico
+          </label>
+
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="ejemplo@correo.com"
+            required
+            aria-required="true">
+        </div>
+
+        <div class="grupo">
+          <label for="telefono">
+            Número de teléfono
+          </label>
+
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Número telefónico opcional">
+        </div>
+
+        <div class="grupo">
+          <label for="ciudad">
+            Ciudad o comunidad
+          </label>
+
+          <input
+            type="text"
+            id="ciudad"
+            name="ciudad"
+            placeholder="Lugar de residencia">
+        </div>
+
+        <div class="grupo">
+          <label for="tema">
+            Tema principal
+          </label>
+
+          <select id="tema" name="tema">
+
+            <option value="">
+              Selecciona una opción
+            </option>
+
+            <option value="educacion">
+              Educación
+            </option>
+
+            <option value="seguridad">
+              Seguridad
+            </option>
+
+            <option value="medioambiente">
+              Medio ambiente
+            </option>
+
+            <option value="cultura">
+              Cultura
+            </option>
+
+            <option value="tecnologia">
+              Tecnología
+            </option>
+
+            <option value="otro">
+              Otro
+            </option>
+
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label for="mensaje">
+            Propuesta o mensaje comunitario
+          </label>
+
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escribe aquí tu propuesta, necesidad o mensaje para la comunidad..."
+            required
+            aria-required="true"></textarea>
+        </div>
+
+        <div class="grupo checkbox">
+
+          <label>
+            <input type="checkbox" required>
+
+            Confirmo que la información suministrada será utilizada 
+            únicamente con fines de participación comunitaria y 
+            organización social.
+          </label>
+
+        </div>
+
+        <button type="submit">
+          Enviar participación
+        </button>
+
       </form>
+
     </section>
+
   </main>
 
 </body>
+
 </html>
